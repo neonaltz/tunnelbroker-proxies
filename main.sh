@@ -212,8 +212,10 @@ echo ">-- Setting up rc.local"
 cat >/etc/rc.local <<END
 #!/bin/bash
 
-ulimit -n 600000
-ulimit -u 600000
+ulimit -n 999999
+ulimit -Hn 999999
+ulimit -u 9999999
+ulimit -Hu 9999999
 ulimit -i 1200000
 ulimit -s 1000000
 ulimit -l 200000
